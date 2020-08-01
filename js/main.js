@@ -6,7 +6,7 @@ AOS.init({
 
 jQuery(document).ready(function ($) {
 	"use strict";
-	$('body').niceScroll();
+	// $('body').niceScroll();
 	var siteMenuClone = function () {
 		$('.js-clone-nav').each(function () {
 			var $this = $(this);
@@ -168,7 +168,7 @@ jQuery(document).ready(function ($) {
 
 	var siteStellar = function () {
 		$(window).stellar({
-			responsive: false,
+			responsive: true,
 			parallaxBackgrounds: true,
 			parallaxElements: true,
 			horizontalScrolling: false,
