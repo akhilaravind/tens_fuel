@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5,
 .color-white-opacity-5 {
   color: rgba(255, 255, 255, 0.5); }
 
-.site-wrap:before {
+.site-container:before {
   display: none;
   -webkit-transition: .3s all ease-in-out;
   -o-transition: .3s all ease-in-out;
@@ -55,11 +55,11 @@ h1, h2, h3, h4, h5,
   opacity: 0;
   visibility: hidden; }
 
-.offcanvas-menu .site-wrap {
+.offcanvas-menu .site-container {
   height: 100%;
   width: 100%;
   z-index: 2; }
-  .offcanvas-menu .site-wrap:before {
+  .offcanvas-menu .site-container:before {
     opacity: 1;
     visibility: visible; }
 
@@ -834,9 +834,12 @@ h1, h2, h3, h4, h5,
   width: 162px;
   background: linear-gradient(45deg, transparent, #c0e9fc);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px 0;
 }
-.icon-globe{
+.icon-container .icon-globe{
   font-size: 54px;
   color: #fff;
 }
@@ -845,13 +848,14 @@ h1, h2, h3, h4, h5,
       width: 115px;
     }
     .phone-block .text-block {
+      
       padding: 10px 20px!important;
     }
     .phone-block .icon-globe{
       font-size: 40px;
     }
     .phone-block .text-block p{
-      font-size: 15px;
+      font-size: 13px;
       margin-bottom: 5px;
     }
     .phone-block .text-block h3{
@@ -860,6 +864,7 @@ h1, h2, h3, h4, h5,
     .choose-us-image{
       display: none;
     }
+  
  }
  @media (min-width: 767px) {
    .icon-container{
@@ -873,6 +878,7 @@ h1, h2, h3, h4, h5,
       top: -60px!important;
       right: -185px;
     }
+    
  }
  @media (min-width: 990px) {
     .choose-us-image{
@@ -880,6 +886,7 @@ h1, h2, h3, h4, h5,
       top: -120px!important;
       right: -185px;
     }
+ 
  }
 
 .container .row .sec-title .tag-line{
@@ -919,6 +926,15 @@ h1, h2, h3, h4, h5,
   top: -100px;
 }
 /* ./ Choose us */
+/* fuel management */
+.fuel-management-section .fuel-management-img{
+    height: 100%;
+    width: 100%;
+}
+/* ./ fuel management */
+.contact-us-img{
+  width: 100%;
+}
 .section-1 {
   margin-top: 10rem; }
 
@@ -1015,28 +1031,56 @@ h1, h2, h3, h4, h5,
       background-color: #007bff; }
 
 .footer-section {
+  position: relative;
   padding: 7em 0;
   /* background-color: #fafafa; */
- }
+}
+
   .footer-section p {
     font-size: 1rem; }
-    .footer-section p .highlight{
+    .highlight{
       color:#007bff
     }
-  .footer-section h3 {
+  .footer-section span.content-heading {
     font-size: .9rem;
+    border-bottom: 1.5px solid #007bff;
     letter-spacing: .1rem;
     text-transform: uppercase;
-    color: #000;
+    color: #7f8284;
     margin-bottom: 1.5rem;
-    font-weight: 900; }
+    font-weight: 600; }
   .footer-section .footer-links li {
     align-items: center;
     display: flex;
     }
      .footer-section .footer-links li{
        margin-right:10px;
-     }
+       margin-left: 20px;
+      }
+      .footer-section .footer-links li a{
+        text-decoration: none;
+        color: #7f8284;
+
+      }
+      .footer-section .footer-links li a:hover{
+        text-decoration: none;
+        color: #7f8284;
+
+      }
+      .footer-section .footer-links li span{
+        position: relative;
+        color:#007bff
+      }
+      .footer-section .footer-links li span.icon-map-marker:before{
+        position: absolute;
+        right: 10px;
+        top: -8px;
+      }
+      .footer-section .footer-links li span.icon-phone2:before, .footer-section .footer-links li span.icon-globe:before{
+        position: absolute;
+        top: -8px;
+        right: 10px;
+      }
 .social-links span{
   color:#007bff
 }
@@ -1056,7 +1100,7 @@ h1, h2, h3, h4, h5,
     font-weight: 900; }
   .process h3, .service h3 {
     font-size: 1.5rem;
-    color: #000;
+    color: #007bff;
     font-weight: 700;
     margin-bottom: 1.5rem; }
 
@@ -1209,24 +1253,28 @@ h1, h2, h3, h4, h5,
     margin-bottom: 35px;
 }
 
+
 .carousel-item--1 .carousel-item__image{
+  background-image: url('../images/banner/bunker-3.jpg');
+}
+.carousel-item--2 .carousel-item__image{
   background-image: url('../images/banner/banner-2.jpg');
 }
 
 
-.carousel-item--2 .carousel-item__image{
+.carousel-item--3 .carousel-item__image{
   background-image: url('../images/banner/lube.jpg');
 }
 
-.carousel-item--3 .carousel-item__image{
+.carousel-item--4 .carousel-item__image{
   background-image: url('../images/banner/banner-1.jpg');
 }
 
-.carousel-item--4 .carousel-item__image{
+.carousel-item--5 .carousel-item__image{
   background-image: url('../images/banner/tar.jpg');
 }
 
-.carousel-item--5 .carousel-item__image{
+.carousel-item--6 .carousel-item__image{
   background-image: url('../images/banner/petrochemical.jpg');
 }
 
