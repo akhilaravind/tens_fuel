@@ -1,31 +1,26 @@
-name: Deploy Website to GoDaddy
+name: Deploy to GoDaddy FTP
 
 on:
   push:
     branches:
       - main
-      - dev-ui
 
 jobs:
-  web-deploy:
-    name: Deploy to GoDaddy FTP
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy to GoDaddy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Upload files to GoDaddy FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ftp.tensfuel.com
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           port: 21
-          server-dir: /
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.vscode/**
-            **/README.md
+          local-dir: ./dist/
+          server-dir: /public_html/
+          security: loose
