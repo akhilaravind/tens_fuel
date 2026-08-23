@@ -3,7 +3,6 @@ name: Deploy Website to GoDaddy
 on:
   push:
     branches:
-      - dev-ui
       - main
 
 jobs:
